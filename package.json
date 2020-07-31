@@ -1,0 +1,19 @@
+{
+  "name": "norbot",
+  "version": "1.0.0",
+  "description": "Discord bot made for friends to add a little spice to the server.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edwardidk/NORBOT.git"
+  },
+  "author": "Edwardidk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edwardidk/NORBOT/issues"
+  },
+  "homepage": "https://github.com/Edwardidk/NORBOT#readme"
+}
