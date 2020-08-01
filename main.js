@@ -19,12 +19,16 @@ client.on('message', msg => {
     let dadMsg = msg.content.split('');
     let dadText = '';
 
-    if (imTest[0] < imTest[1]) {
-      for (var i = dadText + 3; i < dadMsg.length; i++) {
+    if (imTest[0] != -1) {
+      for (var i = imTest[0] + 3; i < dadMsg.length; i++) {
         dadText += dadMsg[i];
       }
-    } else {
-      for (var i = dadText + 4; i < dadMsg.length; i++) {
+    } else if (imTest[1] != -1) {
+      for (var i = imTest[1] + 4; i < dadMsg.length; i++) {
+        dadText += dadMsg[i];
+      } 
+    } else if (imTest[2] != -1) {
+      for (var i = imTest[2] + 4; i < dadMsg.length; i++) {
         dadText += dadMsg[i];
       } 
     }
