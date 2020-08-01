@@ -11,6 +11,26 @@ client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('pong');
   }
+
+  // dad joke
+  let imTest = [msg.content.toLowerCase().search("i\'m"), msg.content.toLowerCase().search("im")];
+
+  if ((imTest[0] != -1 || imTest[1] != -1) && !msg.author.bot) {
+    let dadMsg = msg.content.split('');
+    let dadText = '';
+
+    if (imTest[0] > imTest[1]) {
+      for (var i = dadText + 4; i < dadMsg.length; i++) {
+        dadText += dadMsg[i];
+      }
+    } else {
+      for (var i = dadText + 3; i < dadMsg.length; i++) {
+        dadText += dadMsg[i];
+      } 
+    }
+
+    msg.channel.send("Hi " + dadText + ", I'm NORBOT!")
+  }
 });
 
 client.login(config.token);
