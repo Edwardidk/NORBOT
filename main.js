@@ -13,18 +13,18 @@ client.on('message', msg => {
   }
 
   // dad joke
-  let imTest = [msg.content.toLowerCase().search("i\'m"), msg.content.toLowerCase().search("im")];
+  let imTest = [msg.content.toLowerCase().search("im "), msg.content.toLowerCase().search("i\'m "), msg.content.toLowerCase().search("i’m ")];
 
-  if ((imTest[0] != -1 || imTest[1] != -1) && !msg.author.bot) {
+  if (new Set(imTest).size != 1 && !msg.author.bot) {
     let dadMsg = msg.content.split('');
     let dadText = '';
 
-    if (imTest[0] > imTest[1]) {
-      for (var i = dadText + 4; i < dadMsg.length; i++) {
+    if (imTest[0] < imTest[1]) {
+      for (var i = dadText + 3; i < dadMsg.length; i++) {
         dadText += dadMsg[i];
       }
     } else {
-      for (var i = dadText + 3; i < dadMsg.length; i++) {
+      for (var i = dadText + 4; i < dadMsg.length; i++) {
         dadText += dadMsg[i];
       } 
     }
